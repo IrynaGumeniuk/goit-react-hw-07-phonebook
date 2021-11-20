@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addContact } from "../../redux/operations";
 import { getContactsItems } from "../../redux/selectors";
-import "./ContactForm.module.css";
+import s from "./ContactForm.module.css";
 
 function ContactForm() {
   const dispatch = useDispatch();
@@ -50,28 +50,30 @@ function ContactForm() {
   };
 
   return (
-    <form className="Form" onSubmit={handleSubmit}>
-      <label className="Form-label">
-        Name
+    <form className={s.Form} onSubmit={handleSubmit}>
+      <label className={s.FormLabel}>
         <input
           className="Form-input"
           type="text"
           name="name"
           value={name}
           onChange={handleInputChange}
+          placeholder="Enter name..."
+          required
         />
       </label>
-      <label className="Form-label">
-        Number
+      <label className={s.FormLabel}>
         <input
           className="Form-input"
           type="text"
           name="number"
           value={number}
           onChange={handleInputChange}
+          placeholder="Number..."
+          required
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button type="submit" className={s.btn}>Add contact</button>
     </form>
   );
 }

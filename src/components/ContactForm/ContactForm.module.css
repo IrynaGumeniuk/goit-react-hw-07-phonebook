@@ -10,3 +10,12 @@
 .FormInput {
   display: block;
 }
+
+.btn {
+  padding: 3px 7px;
+}
+
+.btn:hover {
+  background: cadetblue;
+  color: #fff;
+}

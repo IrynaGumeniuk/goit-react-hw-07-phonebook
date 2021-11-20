@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { deleteContact, fetchContacts } from "../../redux/operations";
 import { getContactList } from "../../redux/selectors";
-import "./ContactsList.module.css";
+import s from "./ContactsList.module.css";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
@@ -15,7 +15,7 @@ const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <table className="List-table">
+    <table className={s.ListTable}>
       <tbody>
         {contacts.map(({ name, number, id }) => (
           <tr key={id}>
@@ -23,7 +23,7 @@ const ContactList = () => {
             <td>{number}</td>
             <td>
               <button type="button" onClick={() => dispatch(deleteContact(id))}>
-                del
+                delete
               </button>
             </td>
           </tr>

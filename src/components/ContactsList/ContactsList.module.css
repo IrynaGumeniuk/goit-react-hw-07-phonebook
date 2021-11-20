@@ -1,0 +1,14 @@
+.ListTable {
+  margin: 15px;
+  width: 350px;
+  border-collapse: collapse;
+}
+.ListTable td {
+  padding: 5px;
+}
+.ListTable tr:not(:last-child) {
+  margin-bottom: 10px;
+}
+.ListTable tr:hover {
+  background-color: orange;
+}

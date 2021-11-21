@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as actions from "./actions";
 
-axios.defaults.baseURL = "http://localhost:1234";
+axios.defaults.baseURL = "https://6198e7e0164fa60017c23214.mockapi.io/api/goit-react-hw-07-phonebook/";
 
 export const fetchContacts = () => (dispatch) => {
   dispatch(actions.fetchContactsRequest());

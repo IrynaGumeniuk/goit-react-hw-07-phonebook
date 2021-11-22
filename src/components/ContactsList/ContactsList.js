@@ -15,10 +15,10 @@ const ContactList = () => {
   }, [dispatch]);
 
   return (
-    <table className={s.ListTable}>
+    <table table className={s.ListTable} >
       <tbody>
         {contacts.map(({ name, number, id }) => (
-          <tr key={id}>
+          <tr key={id} >
             <td>{name}</td>
             <td>{number}</td>
             <td>
@@ -29,7 +29,7 @@ const ContactList = () => {
           </tr>
         ))}
       </tbody>
-    </table>
+    </table >
   );
 };
 ContactList.propTypes = {

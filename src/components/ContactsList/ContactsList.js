@@ -17,10 +17,10 @@ const ContactList = () => {
   return (
     <table table className={s.ListTable} >
       <tbody>
-        {contacts.map(({ name, number, id }) => (
+        {contacts.map(({ name, phone, id }) => (
           <tr key={id} >
             <td>{name}</td>
-            <td>{number}</td>
+            <td>{phone}</td>
             <td>
               <button type="button" onClick={() => dispatch(deleteContact(id))}>
                 delete

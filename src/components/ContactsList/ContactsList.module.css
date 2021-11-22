@@ -1,6 +1,6 @@
 .ListTable {
   margin: 15px;
-  width: 350px;
+  width: auto;
   border-collapse: collapse;
 }
 .ListTable td {
